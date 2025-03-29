@@ -1,0 +1,156 @@
+* {
+    font-family: Verdana , Tahoma, sans-serif; 
+
+}
+
+body {
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    height: 100vh;
+    background-image: url("assets/Moonlit.jpg")
+
+}
+
+main {
+    width: 80vw;
+    height: 80vh;
+    background: linear-gradient(to bottom, #f8f8f8 , #cfcfcf);
+    border-radius: 15px;
+    display: flex;
+    align-items: center ;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    color: #383838;
+    border: #383838;
+
+}
+
+section {
+    width: 100%;
+    margin-top: 20px ;
+    border: #5f5c5c solid 3px;
+    border-radius: 10px;
+    overflow-y: hidden;
+
+}
+
+section.populated {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-height: 80vh;   /* ✅ Adjust height so scrolling can work */
+    padding-right: 10px; /* ✅ Prevents scrollbar from overlapping content */
+    overflow-y: hidden;
+}
+
+.scrollbar {
+    height: 80vh; /* Example height, adjust as needed */
+    overflow-y: auto; /* Or overflow-y: auto; */
+    scroll-behavior: smooth;
+}
+
+
+
+.starter-text{
+    font-size: small;
+}
+
+form {
+    height: 50px;
+    width: 100%;
+    display:flex;
+    padding-top: 20px;
+    border-radius: 0 0 10px 10px ;
+    overflow: visible;
+}
+
+input.question-box{
+    width: 80%;
+    padding: 10px;
+    font-size: 15px;
+    color: #383838;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+
+}
+
+input[type=submit] {
+    width: 15% ;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    color: #fff;
+    background-color: #411b8d;
+    border-radius: 10px;
+
+}
+
+input:focus{
+    outline: none;
+}
+
+.bubble {
+    margin: 8px ;
+    padding: 8px;
+    font-size: 15px;
+    border:  none ;
+    color: #383838;
+    box-shadow: #959da533 0 8px 24px;
+    width: 80%;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.bubble.user {
+    border-radius : 20px ;
+    background-color: rgb(203, 233, 250);
+    margin-left: auto;
+}
+
+.bubble.assistant {
+    border-radius: 20px ;
+    background-color: #c1fff8;
+}
+
+
+.prompt-suggestion-button {
+
+    margin: 8px;
+    font-size: 15px;
+    border: 10px;
+    background-color: #ffadad;
+    border-radius: 10px;
+    color: #383838;
+    box-shadow: #959da533 0 8px 24px rgba(0,0,0,0);
+
+}
+
+.loader {
+    margin: 10px;
+    width: 60px;
+    aspect-ratio: 4 / 1;
+    display: flex;
+    background: 
+        no-repeat radial-gradient(circle closest-side, #383838 90%, transparent) 0 50%, 
+        no-repeat radial-gradient(circle closest-side, #383838 90%, transparent) 50% 50%, 
+        no-repeat radial-gradient(circle closest-side, #383838 90%, transparent) 100% 50%;
+    background-size: calc(100% / 3) 100%;
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+    33% { background-size: calc(100% / 3) 0, calc(100% / 3) 100%, calc(100% / 3) 100%; }
+    50% { background-size: calc(100% / 3) 100%, calc(100% / 3) 0, calc(100% / 3) 100%; }
+    66% { background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0; }
+}
+
+
+
+
